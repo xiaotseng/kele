@@ -1,5 +1,5 @@
 #coding:utf-8
-#
+#dsd
 from math import log
 def calcShannonEnt(dataSet):#求熵
     numEntries=len(dataSet)#样本数
