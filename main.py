@@ -1,6 +1,7 @@
 #coding: utf-8
 from numpy import *
 from math import log
+
 student=dtype({'names':['name','age','weight'],'formats':['S32','i','f']},align=True)
 a=array([('Zhang',32,65.5),('Wang',24,55.2)],dtype=student)
 #print a
