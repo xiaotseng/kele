@@ -31,8 +31,8 @@ def chooseBestFeatureToSplit(dataSet):
     baseEntropy=calcShannonEnt(dataSet)#数组的原始熵，用于与划分后的数据集的熵进行比较
     bestInfoGain=0.0;bestFeature=-1
     for i in range(numFeatures):#遍历所以特征，比较哪一特征的信息增益大
-        featList=[example[i] for example in dataSet]#得到前前列的值
-        uniqueVals=set(featList)#排序并消重量
+        featList=[example[i] for example in dataSet]#得到当前列的所有值
+        uniqueVals=set(featList)#并消重量，得到唯一
         newEntropy=0.0#当前列的信息熵(当前条件熵)
         for value in uniqueVals:#遍历当前特征的所以值
             subDataSet=splitDataSet(dataSet,i,value)
