@@ -35,7 +35,7 @@ def chooseBestFeatureToSplit(dataSet):
         uniqueVals=set(featList)#并消重量，得到唯一
         newEntropy=0.0#当前列的信息熵(当前条件熵)
         for value in uniqueVals:#遍历当前特征的所以值
-            subDataSet=splitDataSet(dataSet,i,value)
+            subDataSet=splitDataSet(dataSet,i,value)#得到子数组
             prob=len(subDataSet)/float(len(dataSet))
             newEntropy+=prob*calcShannonEnt(subDataSet)
         infoGain=baseEntropy-newEntropy
